@@ -1,0 +1,5 @@
+node_modules/
+.gitignore
+deployment.yml
+service.yml
+README.md

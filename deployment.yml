@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-esiee-node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy-esiee-node-app
+  template:
+    metadata:
+      labels:
+        app: dummy-esiee-node-app
+    spec:
+      containers:
+        - image: indyteo/dummy-esiee-node-app
+          imagePullPolicy: IfNotPresent
+          name: dummy-esiee-node-app
+      restartPolicy: Always
